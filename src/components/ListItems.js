@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import axios from 'axios'
 
 import Items from './Items';
@@ -21,9 +21,9 @@ export default class ListItems extends Component {
 
   render() {
     return (
-      <View>
+      <ScrollView style={{ backgroundColor: '#999' }}>
 	    	{ this.state.listItems.map(item => ( <Items key={item.titulo} item={item} /> ) ) }
-      </View>
+      </ScrollView>
     );
   }
 }
